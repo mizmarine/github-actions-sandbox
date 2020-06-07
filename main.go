@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/mizmarine/github-actions-sandbox/message"
+)
 
 func main() {
-	msg := Message()
+	msg := message.Message()
 	fmt.Println(msg)
 }
