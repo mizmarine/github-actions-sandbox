@@ -6,11 +6,12 @@ test:
 run:
 	go run main.go
 
-build: $(APP_NAME)
 
 APP_NAME:=app
 $(APP_NAME):
 	go build -o $@
+
+build: $(APP_NAME)
 
 clean:
 	-rm $(APP_NAME)
