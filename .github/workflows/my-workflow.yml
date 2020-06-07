@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pwd
-          run: pwd
+        run: pwd
       - name: ls
-          run: ls -la
+        run: ls -la
       - name: test
         run: make test
