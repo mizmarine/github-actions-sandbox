@@ -12,5 +12,7 @@ jobs:
         run: pwd
       - name: ls
         run: ls -la
+      - name: env
+        run: go version
       - name: test
         run: make test
