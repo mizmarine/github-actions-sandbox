@@ -3,7 +3,7 @@ name: MyWorkflow
 on:
   push:
     paths:
-      - 'message/**'
+      - '**.go'
 
 jobs:
   test:
