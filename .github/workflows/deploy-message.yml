@@ -1,18 +1,16 @@
 name: deploy-message
 on:
-  pull_request
+  push:
+    branches:
+      - master
 jobs:
   test:
     name: test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        go:
-          - '1.13.4'
-          - '1.14.2'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v1
         with:
-          go-version: ${{ matrix.go }}
+          go-version: '1.14.2'
+      - run: make test
       - run: echo deploy-message
