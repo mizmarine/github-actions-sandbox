@@ -7,5 +7,5 @@ import (
 
 func TestMessage(t *testing.T){
 	msg := Message()
-	assert.Equal(t, "message dayo", msg)
+	assert.Equal(t, "message dayo!", msg)
 }
