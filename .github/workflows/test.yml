@@ -1,21 +1,18 @@
-name: MyWorkflow
-# This workflow is triggered on pushes to the repository.
+name: test
 on:
-  push:
-    paths:
-      - 'message/*'
-
+  push
 jobs:
   test:
     name: test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go: [ '1.13.4', '1.14.2' ]
+        go:
+          - '1.13.4'
+          - '1.14.2'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
-      - name: test
-        run: make test
+      - run: make test
