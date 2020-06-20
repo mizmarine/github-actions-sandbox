@@ -1,9 +1,9 @@
 name: MyWorkflow
 # This workflow is triggered on pushes to the repository.
 on:
-  - push:
-      - paths:
-          - message
+  push:
+    paths:
+      - message
 
 jobs:
   test:
