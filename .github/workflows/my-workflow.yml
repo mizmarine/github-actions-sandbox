@@ -1,9 +1,7 @@
 name: MyWorkflow
 # This workflow is triggered on pushes to the repository.
 on:
-  push:
-    paths:
-      - '**.go'
+  push
 
 jobs:
   test:
