@@ -1,5 +1,5 @@
 package message
 
 func Message() string {
-	return "message dayo"
+	return "message dayo-"
 }
